@@ -1,0 +1,15 @@
+<h1>SIGNUP PAGE</h1>
+
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="create name" name="username"> 
+    <input type="text" placeholder="create password" name="password"> 
+
+    <button type="submit" style="background-color: rgb(192, 61, 61);">signup</button>
+</form>
+
+<p>{% if user %}
+    New user found: {{ user.username}}
+    {% endif%}
+</p>
